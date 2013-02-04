@@ -85,7 +85,19 @@ public class GameMaker<G extends Game, GT extends GameTable<G>, GF extends GameF
 		if (!gameTable.isSetUp) {
 			gameTable.setupTable();
 		}
-		startGame();
+	}
+	
+	/**
+	 * Returns the GameTable instance already set up.
+	 * Checks whether table is already set up before returning.
+	 */
+	public GameTable<G> getGameTable() {
+		if(gameTable.isSetUp) {
+			return gameTable;
+		} else {
+			gameTable.setupTable();
+			return gameTable;
+		}
 	}
 
 	// TODO write ability to save games to file

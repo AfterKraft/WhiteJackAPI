@@ -1,5 +1,10 @@
 package com.whitejack.api.net.server;
 
+import com.whitejack.api.Game;
+import com.whitejack.api.GameFactory;
+import com.whitejack.api.GameMaker;
+import com.whitejack.api.GameTable;
+
 /**
  * The basis of a WhiteJack Server. Used as a framework for 
  * starting a client offline or official server online server.
@@ -9,6 +14,7 @@ package com.whitejack.api.net.server;
 public abstract class Server {
 	
 	private boolean onlineMode = true;
+//	private GameMaker gameMaker;
 	
 	private String version = this.getClass().getPackage().getImplementationVersion();
 	

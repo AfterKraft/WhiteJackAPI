@@ -33,6 +33,10 @@ public abstract class GameTable<G extends Game> {
 	abstract protected void initialize();
 
 	abstract protected void removePlayer(User user);
+	
+	public List<User> getUsers() {
+		return this.users;
+	}
 
 	public void playGame() {
 		initialize();
