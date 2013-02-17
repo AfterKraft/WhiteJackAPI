@@ -43,7 +43,7 @@ public class Card {
 	}
 
 	public void setURL() {
-		path = "/com/whitejack/images/Cards/";
+		path = "/co/whitejack/images/Cards/";
 		path += rank + suit;
 		url = Card.class.getResource(path);
 		setIcon(new ImageIcon(url));
